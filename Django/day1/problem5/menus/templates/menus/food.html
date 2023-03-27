@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  {% for fd in food %}
+    <p>{{forloop.counter0}} {{fd}}</p>
+  {% endfor %}
+
+  {% include '_order.html' %}
+{% endblock content %}
+
+

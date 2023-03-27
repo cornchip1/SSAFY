@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>계산결과</h1>
+    {% block content %}
+        <p>{{n1}} + {{n2}} = {{n1|add:n2}}</p>
+        <p>{{n1}} * {{n2}} = {{multiplied}}</p>
+        <p>{{n1}} - {{n2}} = {{subtracted}}</p>
+        {% if n2 == 0 %}
+            <p>계산할 수 없습니다</p>
+        {% else %}
+            <p>{{n1}} / {{n2}} = {{divided}} </p>
+        {% endif %}
+    {% endblock content %}
+</body>
+</html>

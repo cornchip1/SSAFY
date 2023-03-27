@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% block content %}
+  <h1>Fruit</h1>
+
+  <h3>#1</h3>
+  {% for fruit in fruit_list %}
+    <p>
+      {{fruit}}
+    </p>
+  {% endfor %}
+  <br>
+
+  <h3>#2</h3>
+  {% for fruit in fruit_list %}
+    {% if fruit|length >= 2 %}
+      <p>{{fruit}}</p>
+    {% endif %}
+  {% endfor %}
+  <br>
+
+  <h3>#3</h3>
+  {% for fruit in fruit_list %}
+    {% if fruit not in hate %}
+    <p>
+      {{fruit}}
+    </p>
+    {% endif %}
+  {% endfor %}
+  <br>
+
+  <h3>#4</h3>
+  {% for fruit in fruit_list %}
+    <p>
+      {{fruit|truncatechars:3}}
+    </p>
+  {% endfor %}
+  <br>
+  
+  <h3>#5 : apply all conditions</h3>
+  {% for fruit in fruit_list %}
+    {% if fruit|length >= 2 and fruit not in hate %}
+    <p>
+      {{fruit|truncatechars:3}}
+    </p>
+    {% endif %}
+  {% endfor %}
+  {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>연산할 두 숫자를 입력하세요</h1>
+  <form action="{% url 'calculators:result' %}" method = "GET">
+    <label for="first">첫번째 숫자 : </label>
+    <input type="int" name = 'first' id = 'first'>
+
+    <label for="second">두번째 숫자 : </label>
+    <input type="int" name = 'second' id = 'second'>
+
+    <input type="submit" name = 'calculate!'>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+.alert{
+  width: 505px;
+  height: 70px;
+  background-color: rgba(215, 18, 0, 0.936);
+}
+.line{
+  width: 504px;
+  height: 2px;
+  background-color: rgb(197, 197, 197)
+}
+.border{
+  width: 505px;
+  height: 460px;
+  border: 2px solid rgb(197, 197, 197);
+}
+.blank{
+  width: 460px;
+  height: 50px;
+  margin: 20px;
+  border: 2px solid rgb(197, 197, 197);
+}
+.checkbox{
+  width: 20px;
+  height: 20px;
+  border: 2px solid gray;
+}
+.button{
+  width: 450px;
+  height: 50px;
+}

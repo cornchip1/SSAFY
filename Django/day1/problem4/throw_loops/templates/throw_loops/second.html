@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>catch! I catch {{firstv}}!</p>
+  <form action="{% url 'throw_loops:third' %}">
+    <label for="secondv1">and throw!</label>  
+    <input type="text" id = 'secondv1' name = 'secondv1'>
+    <label for="secondv2">twice!</label>  
+    <input type="text" id = 'secondv2' name = 'secondv2'>
+    <input type="submit" value = '휙'>
+  </form>
+{% endblock content %}
+
+

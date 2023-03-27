@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Sign Up</h1>
+  
+  <form action="{% url 'accounts:signup' %}" method = "POST">
+    {% csrf_token %}
+    {% comment "" %}# views에서 form 을 넘겨주고 있음 - 불러오기{% endcomment %} 
+    {{form.as_p}} 
+    <input type="submit" name = 'signup'>
+    <a href="{% url 'articles:index' %}">back to lists</a>
+  </form>
+{% endblock content %}

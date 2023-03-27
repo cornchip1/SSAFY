@@ -1,0 +1,48 @@
+Shell plus
+
+In [2]: Movie.objects.all()
+Out[2]: <QuerySet []>
+
+In [3]: Movie.objects.create(title = 'Venom: Let There Be Carnage', genre = 'action')
+Out[3]: <Movie: 1번째 영화-Venom: Let There Be Carnage(action)>
+
+In [4]: Movie.objects.create(title = 'Rons Gone Wrong', genre = 'animation')
+Out[4]: <Movie: 2번째 영화-Rons Gone Wrong(animation)>
+
+In [5]: Movie.objects.create(title = '007 No Time To Die', genre = ' action')
+Out[5]: <Movie: 3번째 영화-007 No Time To Die( action)>
+
+In [7]: Movie.objects.create(title = 'Dune', genre = 'adventure')
+Out[7]: <Movie: 4번째 영화-Dune(adventure)>
+
+In [8]: Movie.objects.all()
+Out[8]: <QuerySet [<Movie: 1번째 영화-Venom: Let There Be Carnage(action)>, <Movie: 2번째 영화-Rons 
+Gone Wrong(animation)>, <Movie: 3번째 영화-007 No Time To Die( action)>, <Movie: 4번째 영화-Dune(adventure)>]>
+
+In [26]: Movie.objects.order_by('-id')
+Out[26]: <QuerySet [<Movie: 4번째 영화-Dune(adventure)>, <Movie: 3번째 영화-007 No Time To Die( action)>, <Movie: 2번째 영화-Rons Gone Wrong(animation)>, <Movie: 1번째 영화-Venom: Let There Be Carnage(action)>]>
+
+# 3번째 영화 genre 가 ' action'으로 저장되어 있어서 수정 필요
+
+In [48]: Movie.objects.get(pk=3)
+Out[48]: <Movie: 3번째 영화-007 No Time To Die( action)>
+
+In [49]: m = Movie.objects.get(pk=3)
+
+In [50]: m.genre = 'action'
+
+In [51]: m.save()
+
+In [52]: m.genre
+Out[52]: 'action'
+
+In [53]: Movie.objects.get(pk=3)
+Out[53]: <Movie: 3번째 영화-007 No Time To Die(action)>
+
+In [57]: Movie.objects.filter(genre__exact = 'action')
+Out[57]: <QuerySet [<Movie: 1번째 영화-Venom: Let There Be Carnage(action)>, <Movie: 3번째 영화-007 
+No Time To Die(action)>]>
+
+In [59]: Movie.objects.filter(title__endswith = 'e')
+Out[59]: <QuerySet [<Movie: 1번째 영화-Venom: Let There Be Carnage(action)>, <Movie: 3번째 영화-007 
+No Time To Die(action)>, <Movie: 4번째 영화-Dune(adventure)>]>

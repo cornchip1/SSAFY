@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% if thirdv is not None %}
+    <p>catch! I catch {{thirdv}}!</p>
+  {% else %}
+    <p>catch! I catch nothing!</p>
+  {% endif %}
+  
+  <form action="{% url 'throw_loops:second' %}">
+    <label for="first">throw!</label>
+    <input type="text" id = 'first' name = 'first'>
+    <input type="submit" value = '휙'>
+  </form>
+
+{% endblock content %}

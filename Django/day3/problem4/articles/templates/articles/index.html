@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <h1>Index</h1>
+  <hr>
+
+  {% for movie in movies %}
+  <p>id : {{movie.id}}</p>
+  <p>title : {{movie.title}}</p>
+  <p>genre : {{movie.genre}}</p>
+  <p>director : {{movie.director}}</p>
+  {% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>계산 결과</h1>
+  <p>{{first}} + {{second}} = {{sum_result}}</p>
+  <p>{{first}} * {{second}} = {{mul_result}}</p>
+  <p>{{first}} - {{second}} = {{sub_result}}</p>
+  {% if div_result|floatformat %}
+    <p>{{first}} / {{second}} = {{div_result}}</p>
+  {% else %}
+    <p>{{div_result}}</p>
+  {% endif %}
+  
+  <a href="{% url 'calculators:calculation' %}">return</a>
+</body>
+</html>

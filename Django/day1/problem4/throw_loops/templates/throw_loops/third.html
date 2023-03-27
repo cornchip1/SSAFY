@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>oops! I catch only {{chosen}} T^T </p>
+  <form action="{% url 'throw_loops:first' %}">
+    <label for="third">throw!</label>
+    <input type="text" id = 'third' name = 'third'>
+    <input type="submit" value = '휙'>
+  </form>
+
+{% endblock content %}
