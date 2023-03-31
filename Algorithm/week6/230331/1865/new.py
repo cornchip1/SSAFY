@@ -1,3 +1,5 @@
+# 이건 안먹히는 코드, 100으로 나눠서 해야함
+
 import sys
 sys.stdin = open('input.txt','r')
 
