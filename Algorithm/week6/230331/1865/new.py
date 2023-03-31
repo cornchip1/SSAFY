@@ -16,9 +16,10 @@ def dfs(i,sm):
     for j in range(N):
         if v[j] == 0 :
             v[j] = 1
-            tmp = sm*arr[i][j]/100
-            if tmp > ans :
-                dfs(i+1,sm*arr[i][j]/100)
+            # tmp = sm*arr[i][j]/100
+            # if tmp > ans :
+            #     dfs(i+1,sm*arr[i][j]/100)
+            dfs(i + 1, sm * arr[i][j] / 100)
             v[j] = 0
 
 
