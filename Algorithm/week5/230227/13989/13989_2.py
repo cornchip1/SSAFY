@@ -5,7 +5,7 @@ def bin(n,res):
 
     x,y = divmod(n,2)
 
-    if x >= 2 : 
+    if x >= 2 :
         res.insert(0,str(y))
         bin(x,res)
     else :
