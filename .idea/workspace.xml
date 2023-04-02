@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="76f3fe12-c515-4834-8655-f628100c14d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Algorithm/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/week6/230329/13991/13991" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/week6/230330/14029/14029.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/week6/230330/14029/ans.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/week6/230330/14029/s_input2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/week6/230330/14037/14037.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/week6/230330/14037/ans.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/week6/230330/14037/sample_input (3).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/week6/230330/14069/sample_input (3).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/week6/230330/15383/15383.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/week6/230330/15383/first.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/week6/230330/15383/s_input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/sample_input (1).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/sample_input (2).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/sample_input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/week6/230329/13991/s_input.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +34,49 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.14069">
+  <component name="RunManager" selected="Python.13989_2">
+    <configuration name="13989_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SSAFY" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/week5/230227/13989" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/week5/230227/13989/13989_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="13989_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SSAFY" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/week5/230227/13989" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/week5/230227/13989/13989_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="14069" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SSAFY" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -90,8 +119,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SSAFY" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithm/week6/230331" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithm/week6/230331/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.13989_2" />
+        <item itemvalue="Python.13989_1" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.14069" />
         <item itemvalue="Python.15674" />
       </list>
@@ -120,6 +173,16 @@
           <url>file://$PROJECT_DIR$/Algorithm/week6/230329/15674/15674.py</url>
           <line>59</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/week6/230331/test.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithm/week5/230227/13989/13989_2.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
