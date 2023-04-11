@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Todo</h1>
+  <hr>
+
+  <form action="{% url 'todos:create' todo.pk%}" method = "POST">
+    {% csrf_token %}
+    {{todo_form}}
+    <input type="submit">
+  </form>
+
+{% endblock content %}
