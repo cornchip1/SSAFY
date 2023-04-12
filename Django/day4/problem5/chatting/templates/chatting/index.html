@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1><center>자유게시판</center></h1>
+  <a href="{% url 'chatting:new' %}">잡담하기</a>
+  <hr>
+
+  {% for chat in chats %}
+    <p>작성자: {{chat.user}} </p>
+    <p>내용: {{chat.content}} </p>
+    <a href="{% url 'chatting:detail' chat.pk %}">detail</a><br>
+    <a href="{% url 'chatting:edit' chat.pk %}">edit</a><br>
+    <form action="{% url 'chatting:delete' chat.pk%}" method = "POST">
+      {% csrf_token %}
+      <input type="submit" value = 'delete'>
+    </form>
+    <hr>
+  {% endfor %}
+
+{% endblock content %}

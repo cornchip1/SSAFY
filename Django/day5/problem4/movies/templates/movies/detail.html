@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>DETAIL</h1>
+  <h2>{{movie.pk}}번째 글</h2>
+  <hr>
+  <p>제목: {{movie.title}} </p>
+  <p>감독: {{movie.director}} </p>
+  <p>코멘트: {{movie.comment}} </p>
+  
+  <form action="{% url 'movies:delete' movie.pk %}" method = "POST">
+    {% csrf_token %}
+    <input type="submit" value = 'delete'>
+  </form>
+  <a href="{% url 'movies:update' movie.pk %}">update</a>
+
+  <hr>
+  <a href="{% url 'movies:index' %}">back</a>
+{% endblock content %}
