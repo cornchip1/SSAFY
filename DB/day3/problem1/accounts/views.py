@@ -10,6 +10,7 @@ def signup(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             form.save()
+            auth_login(request)
             return redirect('accounts:login')
     else:
         form = CustomUserCreationForm()
