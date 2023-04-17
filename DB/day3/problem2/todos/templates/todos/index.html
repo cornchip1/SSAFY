@@ -2,7 +2,26 @@
 
 {% block content %}
   <h1>Todo</h1>
+  <ul>
   {% for todo in todos %}
-    <p>{{todo.author}}-{{todo.title}}</p>
+    {% if todo.author == request.user %}
+    <li>{{todo.author}}-{{todo.title}}</li>
+    {% if todo.completed == True %}
+      <form action="{% url 'todos:toggle' todo.pk %}" method = "POST">
+        {% csrf_token %}
+        <input type="submit" value = '취소하기'>
+      </form>
+    {% else %}
+      <form action="{% url 'todos:toggle' todo.pk %}" method = "POST">
+        {% csrf_token %}
+        <input type="submit" value = '완료하기'>
+      </form>
+    {% endif %}
+    <form action="{% url 'todos:delete' todo.pk %}" method = "POST">
+      {% csrf_token %}
+      <input type="submit" value = '삭제하기'>
+    </form>
+    {% endif %}
   {% endfor %}
-{% endblock content %}
+  </ul>
+  {% endblock content %}

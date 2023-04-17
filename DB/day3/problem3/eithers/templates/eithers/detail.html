@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>DETAIL</h1>
+    <hr>
+    <h1>{{question.title}}</h1>
+    <b>Red TEAM</b>
+    <p> => {{question.issue_a}} </p>
+    <b>Blue TEAM</b>
+    <p> => {{question.issue_b}} </p>
+    <hr>
+    {{comments|length}} 개의 댓글
+    <form action="{% url 'eithers:comments_create' question.pk %}" method = "POST">
+        {% csrf_token %}
+        {{comment_form.as_p}}
+        <input type="submit">
+    </form>
+    {% for c in comments %}
+        <p>{{c.pick}} - {{c.content}}</p>
+    {% endfor %}
+    <hr>    
+
+    <a href="{% url 'eithers:index' %}">back</a>
+{% endblock content %}
