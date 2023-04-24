@@ -59,26 +59,22 @@
   
   <script>
 
-    function getInputValue() {
-      let inputText = document.getElementsByClassName('myInputs')[0].value
-      let input = inputText[0]
-      return input
-    }
-
-    console.log(getInputValue())
     const button = document.querySelector('button')
-    
-    
-    if (getInputValue() === '학생들 모두 화이팅') {
-      button.addEventListener('click',() => {
-        alert('여러분을 응원합니다 :)') 
-      })}
-    else {
-      button.addEventListener('click',() => {
-        alert(':)') 
-      })
-    }
-      
+
+    const popAlert = function(event){
+      const textInput = document.querySelector('.myInputs')
+      const data = textInput.value
+
+      if (data === '학생들 모두 화이팅') {
+        alert('여러분을 응원합니다 :)')
+        }
+      else {
+        alert('다시 시도해 주세요:)')
+      }
+      }
+
+    button.addEventListener('click',popAlert)
+
   </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">버튼</button>
+  <p id="counter">0</p>
+  <script>
+  // 초기값 : 버튼을 누를 때마다 1씩 증가해야 하기 때문에 let 을 사용하여 선언
+  let counterNumber = 0
+  // ID가 btn인 요소를 선택
+  const btn = document.querySelector('#btn')
+  // btn이 클릭 되었을 때마다 함수가 실행됨
+  btn.addEventListener('click',function(event){
+    // console.log(event) // event 의 발생을 확인할 수 있음
+    counterNumber++ // 버튼을 누를 때마다 1씩 증가
+    console.log('버튼을 클릭했어요!!!')
+    
+    const counter = document.querySelector('#counter') // id = counter 인 객체를 불러옴
+    counter.innerText = counterNumber // p 태그의 text 를 counterNumber 로 지정
+  })
+  </script>
+</body>
+
+</html>
