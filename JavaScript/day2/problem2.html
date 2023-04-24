@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 
+    1. forEach 메서드를 활용해 모든 사용자들의 이름을 출력하시오.
+    2. filter 메서드를 활용해 결혼한 사람들만 모아 married 상수에 할당하시오.
+    3. find 메서드를 활용해 이름이 Tom인 사람만 tom 상수에 할당하시오.
+    4. map 메서드를 활용해 모든 사용자에게 isAlive 키를 추가하고 true로 설정한 뒤, newUsers 상수에 할당하시오.
+    5. reduce 메서드를 활용해 모든 사용자들의 계좌잔액을 totalBalance 상수에 할당하시오.
+    */
+
+    const users = [
+      { name: 'John', age: 31, isMarried: true, balance: 100, },
+      { name: 'Sarah', age: 22, isMarried: false, balance: 200, },
+      { name: 'Ashley', age: 25, isMarried: true, balance: 300, },
+      { name: 'Robert', age: 27, isMarried: false, balance: 400, },
+      { name: 'Tom', age: 35, isMarried: true, balance: 500, },
+    ]
+
+    // 1. forEach 메서드를 활용해 모든 사용자들의 이름을 출력하시오.
+    console.log('1번')
+    printFunc = function (user) {
+      console.log(user['name'])
+    }
+    users.forEach(printFunc)
+
+    // 2. filter 메서드를 활용해 결혼한 사람들만 모아 married 상수에 할당하시오.
+    const married = function (users) {
+      return users['isMarried'] === true
+    }
+
+    let marriedUsers = users.filter(married)
+    console.log('2번')
+    console.log(marriedUsers)
+
+    // 3. find 메서드를 활용해 이름이 Tom인 사람만 tom 상수에 할당하시오.
+    const user = users.find(function (user) {
+      return user['name'] === 'Tom'
+    })
+    console.log('3번')
+    console.log(user)
+
+    // 4. map 메서드를 활용해 모든 사용자에게 isAlive 키를 추가하고 true로 설정한 뒤, newUsers 상수에 할당하시오.
+    const addElement = function (user) {
+      user['isAlive'] = true
+    }
+    users.map(addElement)
+    console.log('4번')
+    console.log(users)
+
+    // 5. reduce 메서드를 활용해 모든 사용자들의 계좌잔액을 totalBalance 상수에 할당하시오.
+
+    let balance = []
+    for (u of users) {
+      balance.push(u['balance'])
+    }
+
+    const sum = balance.reduce((total, x) => total + x, 0) 
+    console.log('5번')
+    console.log(sum)
+  </script>
+</body>
+</html>
