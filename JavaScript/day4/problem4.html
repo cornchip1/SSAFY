@@ -29,6 +29,7 @@
     const inputText = document.querySelector('input')
     const inputValue = inputText.value
 
+    if (inputValue.trim()){
     // li element를 생성 후 input element의 value 값을 데이터로 저장한다
     const liTag = document.createElement('li')
     liTag.innerText = inputValue
@@ -52,7 +53,13 @@
     liTag.addEventListener('click', function(event){
       liTag.classList.toggle('done')
     })
+    }
+    else {
+      alert('값을 입력하세요')
+    }
   }
+    
+
 
   form.addEventListener('submit', addTodo)
 </script>
