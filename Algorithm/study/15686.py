@@ -5,7 +5,7 @@ def total_distance(houses, chicken):
     for n in houses:
         distance = N**2
         for c in chicken:
-            d = abs(houses[n][0] - chicken[c][0]) + abs(houses[n][1] - chicken[c][1])
+            d = abs(houses[n][0] - c[0]) + abs(houses[n][1] - c[1])
             distance = min(distance, d)
         td += distance
 
