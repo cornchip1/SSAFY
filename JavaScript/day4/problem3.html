@@ -24,14 +24,14 @@
     <section id="cardsSection" class="row">
       
       <!-- 카드 예시 -->
-      <article class="col-4">
+      <!-- <article class="col-4">
         <div class="card m-1">
           <div class="card-body">
             <h5 class="card-title">Example</h5>
             <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti placeat odit rerum asperiores beatae vitae doloremque consectetur magni delectus, fuga autem laudantium, quidem iusto voluptates non earum dolorem totam dolores.</p>
           </div>  
         </div>
-      </article>
+      </article> -->
       <!-- 카드 예시 -->
       
     </section>
@@ -44,11 +44,50 @@
       카드가 생성되면 기존 input과 textarea의 내용은 삭제되어야 합니다.
       (완성 이후 카드 예시는 삭제)
     */
-    const formTag = document.querySelector('form')
-    const title = document.querySelector('#title')
-    const content = document.querySelector('#content')
-    const addbtn = document.querySelector('btn')
+
+    const cardSection = document.querySelector('#cardsSection')
     
+
+    const form = document.querySelector('form')
+    const addCard = function(event){
+      event.preventDefault()
+
+      const article = document.createElement('article')
+      article.className = 'col-4'
+      cardSection.appendChild(article)
+
+      const title = document.querySelector('#title')
+      const tVal = title.value
+
+      const content = document.querySelector('#content')
+      const cVal = content.value
+
+      // 위에는 문제 없음
+      const card = document.createElement('div') 
+      card.classList.add('card')
+      card.style.margin = '1%'
+
+      const cardBody = document.createElement('div')
+      cardBody.className = 'card-body'
+
+      const cardTitle = document.createElement('h5')
+      cardTitle.className = 'card-title'
+      const cardContent = document.createElement('p')
+      cardContent.className = 'card-text'
+
+      cardTitle.innerText = tVal
+      cardContent.innerText = cVal
+
+      card.appendChild(cardBody)
+      cardBody.appendChild(cardTitle)
+      cardBody.appendChild(cardContent)
+
+      article.appendChild(card)
+
+      event.target.reset()
+    }
+    
+    form.addEventListener('submit',addCard)
   </script>
 </body>
 </html>
