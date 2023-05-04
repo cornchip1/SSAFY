@@ -16,6 +16,44 @@
   <p>테마를 바꿔봅시다.</p>
 
   <script>
+    
+    const gray = document.getElementById('grayButton')
+    gray.addEventListener('click', function(){
+      let body = document.querySelector('body')
+      body.style.backgroundColor = 'gray'
+      
+      let h1 = document.querySelector('h1')
+      h1.style.color = 'white'
+      let p = document.querySelector('p')
+      p.style.color = 'white'
+    })
+
+    const white = document.getElementById('whiteButton')
+    white.addEventListener('click', function(){
+      let body = document.querySelector('body')
+      body.style.backgroundColor = 'white'
+      
+      let h1 = document.querySelector('h1')
+      h1.style.color = 'black'
+      let p = document.querySelector('p')
+      p.style.color = 'black'
+    })
+
+
+    const blue = document.getElementById('navyButton')
+    blue.addEventListener('click', function(){
+      let body = document.querySelector('body')
+      body.style.backgroundColor = 'navy'
+      
+      let h1 = document.querySelector('h1')
+      h1.style.color = 'white'
+      let p = document.querySelector('p')
+      p.style.color = 'white'
+
+      console.log(navy)
+    })
+
+
     /* 
       아래 이미지를 참조하여 li를 클릭하면, 아래와 같이 컬러 테마를 바꾸는 기능을 구현하시오.
       body의 background color 와 color 를 직접 조작하여 테마를 바꾸도록 코드를 작성하시오.

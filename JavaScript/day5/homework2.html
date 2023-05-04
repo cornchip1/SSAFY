@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log('Hi')
+
+    const promise = new Promise ((resolve,reject) => {
+      setTimeout(function () {
+      console.log('SSAFY')
+      resolve()
+      }, 3000)
+    })
+
+    promise
+      .then( () => {console.log('Bye')})
+  </script>
+</body>
+</html>
+
+<!-- 첨부파일의 코드를 실행하면 'Hi' → 'Bye' → 'SSAFY' 순으로 출력한다.
+Promise 객체를 사용하여, Promise 가 resolve 된 경우에만 'Bye' 를 출력하여 'Hi' → 'SSAFY' → 'Bye' 순으로 출력되도록 코드를 작성하시오.
+[첨부파일 참고] -->
