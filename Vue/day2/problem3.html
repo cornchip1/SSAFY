@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .done{
+      color : gray
+    }
+  </style>
+</head>
+<body>
+  <div id = 'app'>
+    <h1>Todo List</h1>
+    <input type="text">
+    <button v-on:click="add()">+</button>
+    <div v-for = 'todo in todos'>
+      <li><input type="checkbox" v-on:click="checked()"><span>{{todo}}</span></li>
+    </div>
+    <button>완료 목록 삭제</button>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data:{
+        todos:[],
+        done:[],
+      },
+      methods : {
+        add: function(event){
+          const input = document.querySelector('input').value
+
+          if (!input.length){
+            alert('내용을 입력해주세요!')
+          }
+          else {this.todos.push(input)
+          console.log(this.todos)
+          }
+        },
+        checked(target){
+          const index = this.done.indexOf(target)
+          console.log(index)
+          console.log(target)
+          if (index < 0){
+            this.done.push(target)
+            console.log(this.done)
+          } 
+        
+        }
+        
+      }
+    }) 
+  </script>
+</body>
+</html>

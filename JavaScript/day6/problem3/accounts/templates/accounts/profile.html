@@ -4,7 +4,7 @@
   <h1>{{ person.username }}의 프로필 페이지</h1>
   {% with followings=person.followings.all followers=person.followers.all %}
     <div id="follow-count">
-      <div>팔로잉 수 : <span id = "followings-count">{{ followings|length }}</span> / 팔로워 수 : <span id ="followers-count">{{ followers|length }}</span></div>
+      <div>팔로잉 수 : {{ followings|length }} / 팔로워 수 : {{ followers|length }}</div>
     </div>
     {% if user != person %}
       <div>
@@ -48,10 +48,12 @@
 {% block script %}
   <script>
     const form = document.querySelector('#follow-form')
+    // console.log(form)
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
 
     form.addEventListener('submit', function (event) {
       event.preventDefault()
+      // console.log(event)
       const userId = event.target.dataset.userId
 
       axios({
@@ -63,9 +65,9 @@
           // 팔로우 버튼 토글
           // console.log(response)
           const followBtn = document.querySelector('#follow-form > button')
-          const isFollowed = response.data.is_followed
-          const followersCount = response.data.followers_count
-          const followingsCount = response.data.followings_count
+          const isFollowed = response.data.isFollowed
+          const followers_count = response.data.followers_count
+          const followings_count = response.data.followings_count
           // const { isFollowed, followers_count, followings_count } = response.data
           const followCountDiv = document.querySelector('#follow-count > div')
 
@@ -75,7 +77,7 @@
             followBtn.innerText = '팔로우'
           }
 
-          followCountDiv.innerText = `팔로잉 수 : ${followingsCount} / 팔로워 수 : ${followersCount}`
+          followCountDiv.innerText = `팔로잉 수 : ${followings_count} / 팔로워 수 : ${followers_count}`
         })
     })
 

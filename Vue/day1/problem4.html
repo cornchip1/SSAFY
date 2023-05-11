@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id = 'lunchApp'>
+    <h1>점심메뉴</h1>
+    <button id = 'randomLunch' v-on:click = "select()">Pick One</button>
+    <p id = 'lunch'></p><br>
+    <hr>
+  </div>
+  <div id = 'lottoApp'>
+    <h1>로또</h1>
+    <button id = 'randomNum' v-on:click = "start()">Get Lucky Numbers</button>
+    <p id ='lotto'></p><br>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const lunchApp = new Vue({
+      el: '#lunchApp',
+      methods:{
+        select : function(event){
+          const lunch = document.querySelector('#lunch')
+          lunchlst = ['국밥','샐러드','돈가스','자장면','굶어']
+          random = _.random(0,4)
+          lunch.innerText = lunchlst[random]
+        }
+      }
+    })
+    const lottoApp = new Vue({
+      el: '#lottoApp',
+      methods : {
+        start : function(event){
+          const lotto = document.querySelector('#lotto')
+          let lst = []
+          for (let i = 1; i<= 6; i++){
+            lst.push(_.random(1,45))
+          }
+          lotto.innerText = `[${lst}]`
+        }
+      }
+    })
+
+  </script>
+</body>
+</html>
